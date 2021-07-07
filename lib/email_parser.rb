@@ -2,3 +2,23 @@
 # emails. The parse method on the class should separate them into
 # unique email addresses. The delimiters to support are commas (',')
 # or whitespace (' ').
+
+class EmailAddressParser
+    attr_accessor :email_addresses 
+  
+    def initialize(email_addresses)
+        @email_addresses = email_addresses
+    end 
+
+    def parse
+       
+        #array = [] 
+        #array << email_addresses.split(",")
+        #array.flatten.map {|email| email.strip }
+    #end  
+    email_addresses.tr(',', '').split.uniq 
+    end 
+
+
+end 
+
